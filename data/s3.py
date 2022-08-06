@@ -25,3 +25,4 @@ def upload_file(df, file_name):
     metrics_data_bucket = s3.Bucket(bucket_name)
     file_buffer = df_to_parquet_bytes(df)
     metrics_data_bucket.upload_fileobj(file_buffer, file_name)
+    print(f"Successfully uploaded {file_name}")
