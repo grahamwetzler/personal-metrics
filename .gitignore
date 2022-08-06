@@ -1,3 +1,7 @@
 .DS_Store
 .env
 *.db
+**/__pycache__/
+**/dbt_packages/
+**/logs/
+**/target/
