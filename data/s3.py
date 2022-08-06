@@ -2,10 +2,10 @@ import boto3
 import os
 import io
 
-access_key_id = os.environ["access_key_id"]
-secret_access_key = os.environ["secret_access_key"]
-s3_endpoint = os.environ["s3_endpoint"]
-bucket_name = os.environ["bucket_name"]
+access_key_id = os.environ["ACCESS_KEY_ID"]
+secret_access_key = os.environ["SECRET_ACCESS_KEY"]
+s3_endpoint = os.environ["S3_ENDPOINT"]
+bucket_name = os.environ["BUCKET_NAME"]
 
 
 def df_to_parquet_bytes(df):

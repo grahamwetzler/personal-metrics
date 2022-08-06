@@ -7,8 +7,8 @@ from s3 import upload_file
 
 BASE_URL = "https://api.youneedabudget.com/v1"
 
-budget_id = os.environ["budget_id"]
-ynab_api_key = os.environ["ynab_api_key"]
+budget_id = os.environ["BUDGET_ID"]
+ynab_api_key = os.environ["YNAB_API_KEY"]
 
 if __name__ == "__main__":
     headers = {"Authorization": f"Bearer {ynab_api_key}"}
