@@ -18,7 +18,7 @@ def df_to_parquet_bytes(df):
 def upload_file(df, file_name):
     s3 = boto3.resource(
         "s3",
-        endpoint_url=s3_endpoint,
+        endpoint_url=f"https://{s3_endpoint}",
         aws_access_key_id=access_key_id,
         aws_secret_access_key=secret_access_key,
     )
