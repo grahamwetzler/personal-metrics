@@ -5,6 +5,14 @@ on:
     - cron: "0 18 * * *"
    workflow_dispatch:
 
+env:
+  ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+  BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+  BUDGET_ID: ${{ secrets.BUDGET_ID }}
+  S3_ENDPOINT: ${{ secrets.S3_ENDPOINT }}
+  SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
+  YNAB_API_KEY: ${{ secrets.YNAB_API_KEY }}
+
 jobs:
   fetch_data:
     runs-on: ubuntu-latest
