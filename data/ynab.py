@@ -17,6 +17,9 @@ if __name__ == "__main__":
         f"{BASE_URL}/budgets/{budget_id}/transactions", headers=headers
     )
 
+    if not transactions_response.ok:
+        raise Exception(transactions_response.text)
+
     transactions_df = pd.DataFrame(transactions_response.json()["data"]["transactions"])
 
     st_series = transactions_df["subtransactions"]
